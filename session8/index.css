@@ -1,0 +1,16 @@
+.heading {
+    color: #505050!important;
+}
+
+.heading-size {
+    font-size: 72px !important;
+}
+
+.text-purple {
+    color: rgb(158, 50, 144);
+}
+
+* {
+    margin: 0;
+    padding: 0 !important;
+}
