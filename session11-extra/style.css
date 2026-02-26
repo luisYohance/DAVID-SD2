@@ -1,0 +1,37 @@
+* {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.bg-color {
+    background-color:#ffa1a1;
+}
+
+.tako-navbar {
+    color:  black;
+    background-color: #ff4f78;
+    border-bottom: #ff4f78 12px groove;
+    border-right: #ff4f78 6px groove;
+    box-shadow: 0px 0px black, 0px 0px 16px 8px #a85b6de7;
+}
+
+.tako-profile img {
+    margin-top: 1.5rem !important;
+    border: 16px #ff4f78 inset;
+    box-shadow: 0px 0px black, -13px 4px 16px 8px #a85b6de7;
+    background-color: #fd91aa;
+    border-radius: 50%;
+}
+
+.tako-profile h3 {
+    margin-top: 1rem !important;
+    margin-left: -4rem !important;
+    padding-left: 3.5rem !important;
+    border: 16px solid#ff4f78;
+    background-color: #fd91aa;
+    z-index: -1;
+    padding-right: 1rem !important;
+    border-top-right-radius: 15%;
+    border-bottom-right-radius: 15%
+}
