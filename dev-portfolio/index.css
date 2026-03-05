@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+@font-face {
+  font-family: "IterGap";
+  src: url("fonts/IterationGap.TTF") format("truetype");
+}
+
+:root {
+  --color-1: #021526;
+  --color-2: #03346e;
+  --color-3: #6eacda;
+  --color-4: #e2e2b6;
+}
+
+body {
+  background-color: var(--color-4) !important;
+}
+
+.bg-color-1 {
+  background-color: var(--color-1) !important;
+}
+
+.bg-color-2 {
+  background-color: var(--color-2) !important;
+}
+
+.bg-color-3 {
+  background-color: var(--color-3) !important;
+}
+
+.bg-color-4 {
+  background-color: var(--color-4) !important;
+}
+
+.navbar {
+  background-color: var(--color-2) !important;
+  color: var(--color-1) !important;
+  padding: 1rem !important;
+}
+
+.navbar-brand {
+  color: var(--color-4) !important;
+  font-family: "IterGap" !important;
+  font-size: 2.6rem !important;
+  font-weight: normal !important;
+  text-shadow: #000000 3px 3px 1px !important;
+}
+
+.nav-link {
+  color: var(--color-4) !important;
+}
+
+.navbar-nav {
+  gap: 1.5rem !important;
+}
+
+@media screen and (max-width: 991px) {
+  .nav-item {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .nav-container: {
+    background-color: #0091ff !important;
+  }
+
+  .navbar {
+    padding: 0 !important;
+    padding-top: 0.5rem !important;
+  }
+
+  .navbar-nav {
+    gap: 0 !important;
+  }
+
+  .navbar-brand {
+    margin: 0.5rem !important;
+  }
+
+  .navbar-toggler {
+    margin: 0.5rem !important;
+  }
+}
