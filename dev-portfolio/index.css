@@ -5,8 +5,18 @@
 }
 
 @font-face {
-  font-family: "IterGap";
-  src: url("fonts/IterationGap.TTF") format("truetype");
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Metrock";
+  src: url("fonts/metrockpersonaluse-yzolv.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
 }
 
 :root {
@@ -20,18 +30,41 @@ body {
   background-color: var(--color-4) !important;
 }
 
+/* FONTS */
+.ff-montserrat {
+  font-family: "Montserrat";
+}
+.ff-metrock {
+  font-family: "Metrock";
+}
+.ff-roboto {
+  font-family: "Roboto";
+}
+
+/* TEXT COLORS */
+.text-color-1 {
+  color: var(--color-1) !important;
+}
+.text-color-2 {
+  color: var(--color-2) !important;
+}
+.text-color-3 {
+  color: var(--color-3) !important;
+}
+.text-color-4 {
+  color: var(--color-4) !important;
+}
+
+/* BACKGROUND COLORS */
 .bg-color-1 {
   background-color: var(--color-1) !important;
 }
-
 .bg-color-2 {
   background-color: var(--color-2) !important;
 }
-
 .bg-color-3 {
   background-color: var(--color-3) !important;
 }
-
 .bg-color-4 {
   background-color: var(--color-4) !important;
 }
@@ -44,30 +77,75 @@ body {
 
 .navbar-brand {
   color: var(--color-4) !important;
-  font-family: "IterGap" !important;
+  font-family: "Metrock" !important;
   font-size: 2.6rem !important;
   font-weight: normal !important;
   text-shadow: #000000 3px 3px 1px !important;
 }
 
+.header-shadow {
+  text-shadow: #000000 3px 3px 1px !important;
+}
+
 .nav-link {
   color: var(--color-4) !important;
+  padding-bottom: 0.5rem !important;
+  padding-top: 1rem !important;
 }
 
 .navbar-nav {
   gap: 1.5rem !important;
 }
 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.nav-link:hover {
+  padding-bottom: 1rem !important;
+  padding-top: 0.5rem !important;
+  transition: 300ms;
+}
+
+.navbar-toggler-icon:hover {
+  background-color: var(--color-1) !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  transition:
+    background-image 500ms,
+    background-color 500ms;
+}
+.profile img {
+  margin-top: 1.5rem !important;
+  border: 16px var(--color-1) solid;
+  background-color: var(--color-2);
+  border-radius: 50%;
+}
+
+.profile-name {
+  border: 12px double var(--color-1);
+  font-family: "Metrock";
+  color: var(--color-4);
+  background-color: var(--color-2);
+  border-radius: 1rem;
+  font-weight: normal !important;
+  text-shadow: #000000 3px 3px 1px !important;
+}
+
+.socials {
+  max-height: 100px;
+}
+
+.tool-row {
+  border-bottom: var(--color-1) 12px groove;
+  border-right: var(--color-1) 6px groove;
+  border-left: 6px var(--color-1) outset;
+  border-top: 6px var(--color-1) outset;
+  background-color: var(--color-4);
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+}
+
 @media screen and (max-width: 991px) {
-  .nav-item {
-    padding-top: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-  }
-
-  .nav-container: {
-    background-color: #0091ff !important;
-  }
-
   .navbar {
     padding: 0 !important;
     padding-top: 0.5rem !important;
@@ -75,6 +153,20 @@ body {
 
   .navbar-nav {
     gap: 0 !important;
+  }
+
+  .nav-link {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-left: 2rem !important;
+  }
+
+  .nav-link:hover {
+    padding-top: 0.6rem !important;
+    padding-left: 4rem !important;
+    padding-bottom: 0.6rem !important;
+    background-color: var(--color-1) !important;
+    transition: 300ms;
   }
 
   .navbar-brand {
