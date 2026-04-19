@@ -1,0 +1,25 @@
+* {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#cpu img {
+  transform: scaleX(-1);
+  filter: hue-rotate(180deg);
+  object-fit: cover !important;
+}
+
+#player img {
+  filter: hue-rotate(340deg);
+  object-fit: cover !important;
+}
+
+#cpu,
+#player {
+  overflow: hidden !important;
+}
+
+.arena {
+  overflow: hidden !important;
+}
