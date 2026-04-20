@@ -44,20 +44,20 @@ async function evaluateResult() {
     playerDivImage.src = `images/${choices[choice]}Img.jpg`;
 
     var evalAudio;
-    if (cpuChoice != choice) {
-      if ((cpuChoice - choice) % 3 == 2) {
-        //lost
-        evalAudio = new Audio("sfx/win.mp3");
-        playerScore++;
-      } else {
-        //won
-        evalAudio = new Audio("sfx/lose.mp3");
-        cpuScore++;
-      }
+    // ROCK : 0, PAPER : 1, SCISSORS : 2;
+    if ((cpuChoice + 1) % 3 == choice) {
+      evalAudio = new Audio("sfx/win.mp3");
+      playerScore++;
+      // Win condition : Player won because their choice is greater than 1
+    } else if (choice != cpuChoice) {
+      evalAudio = new Audio("sfx/lose.mp3");
+      cpuScore++;
+      // Lose condition : Player lost because their choice is not greater than the CPU AND their choices are not equal
     } else {
-      // tied
+      // Tied : Equal choices
       evalAudio = new Audio("sfx/tie.mp3");
     }
+
     evalAudio.play();
     cpuDiv.querySelector(".nametag").innerText = `CPU: ${cpuScore}`;
     playerDiv.querySelector(".nametag").innerText = `PLAYER: ${playerScore}`;
