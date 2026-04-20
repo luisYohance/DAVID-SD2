@@ -45,7 +45,7 @@ async function evaluateResult() {
 
     var evalAudio;
     if (cpuChoice != choice) {
-      if ((cpuChoice - choice) % 3 == 1) {
+      if ((cpuChoice - choice) % 3 == 2) {
         //lost
         evalAudio = new Audio("sfx/win.mp3");
         playerScore++;
