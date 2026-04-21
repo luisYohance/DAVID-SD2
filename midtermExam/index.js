@@ -52,7 +52,7 @@ async function evaluateResult() {
       console.log(`Player (${choices[choice]}) won!`);
       playerScore++;
       // Win condition : Player won because their choice is greater than 1
-    } else if ((cpuChoice - 1) % 3 == choice) {
+    } else if (cpuChoice != choice) {
       evalAudio = new Audio("sfx/lose.mp3");
       console.log(`CPU (${choices[cpuChoice]}) won!`);
       cpuScore++;
