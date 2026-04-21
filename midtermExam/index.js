@@ -23,10 +23,10 @@ function changedChoice(index) {
 async function evaluateResult() {
   if (evaluating == false) {
     evaluating = true;
-    playerDivImage.src = `images/rockImg.jpg`;
-    cpuDivImage.src = `images/rockImg.jpg`;
+    playerDivImage.src = `images/rockImg.png`;
+    cpuDivImage.src = `images/rockImg.png`;
     const cpuChoice = Math.floor(Math.random() * 3) % 3;
-    console.log(cpuChoice);
+
     for (let throws = 0; throws < 3; throws++) {
       playerDivImage.style.transform = `rotate(-${(Math.floor(Math.random() * 30) % 40) + 20}deg)`;
       cpuDivImage.style.transform = `rotate(${(Math.floor(Math.random() * 30) % 40) + 20}deg) scaleX(-1)`;
@@ -39,23 +39,28 @@ async function evaluateResult() {
       playerDivImage.style.transform = `rotate(0deg)`;
       cpuDivImage.style.transform = `rotate(0deg) scaleX(-1)`;
     }
-    console.log(cpuDivImage.src);
-    cpuDivImage.src = `images/${choices[cpuChoice]}Img.jpg`;
-    playerDivImage.src = `images/${choices[choice]}Img.jpg`;
+
+    cpuDivImage.src = `images/${choices[cpuChoice]}Img.png`;
+    playerDivImage.src = `images/${choices[choice]}Img.png`;
 
     var evalAudio;
     // ROCK : 0, PAPER : 1, SCISSORS : 2;
+    console.log(`Player (${choices[choice]}) vs CPU (${choices[cpuChoice]})`);
+
     if ((cpuChoice + 1) % 3 == choice) {
       evalAudio = new Audio("sfx/win.mp3");
+      console.log(`Player (${choices[choice]}) won!`);
       playerScore++;
       // Win condition : Player won because their choice is greater than 1
-    } else if (choice != cpuChoice) {
+    } else if ((cpuChoice - 1) % 3 == choice) {
       evalAudio = new Audio("sfx/lose.mp3");
+      console.log(`CPU (${choices[cpuChoice]}) won!`);
       cpuScore++;
       // Lose condition : Player lost because their choice is not greater than the CPU AND their choices are not equal
     } else {
       // Tied : Equal choices
       evalAudio = new Audio("sfx/tie.mp3");
+      console.log("Tied!");
     }
 
     evalAudio.play();

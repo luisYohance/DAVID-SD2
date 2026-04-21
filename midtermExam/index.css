@@ -6,12 +6,12 @@
 
 #cpu img {
   transform: scaleX(-1);
-  filter: hue-rotate(180deg);
+  filter: hue-rotate(180deg) brightness(85%);
   object-fit: cover !important;
 }
 
 #player img {
-  filter: hue-rotate(340deg);
+  filter: hue-rotate(340deg) brightness(85%);
   object-fit: cover !important;
 }
 
